@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-cedsttlm
+  janus-idp.io/tekton: go-cedsttlm
+  backstage.io/kubernetes-id: go-cedsttlm
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-cedsttlm
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
